@@ -190,36 +190,48 @@ class _SignupScreenState extends State<SignupScreen> {
             type: SpTextBoxType.confirmPass,
             validator: _isValidPswd,
           ),
-          SizedBox(height: 8),
-          Row(
-            children: [
-              SizedBox(
-                height: 20,
-                width: 20,
-                child: Checkbox(
-                  activeColor: ThemeManager.borderColor,
-                  checkColor: ThemeManager.primaryColor,
-                  semanticLabel: "Remember Me?",
-                  value: isChecked,
-                  onChanged: (value) {
-                    setState(() {
-                      isChecked = value ?? false;
-                    });
-                  },
-                ),
-              ),
-              SizedBox(width: 5),
-              Text("Remember Me"),
-              Expanded(child: Container()),
-              Text("Forgot Password?"),
-            ],
-          ),
+          // SizedBox(height: 8),
+          // Row(
+          //   children: [
+          //     SizedBox(
+          //       height: 20,
+          //       width: 20,
+          //       child: Checkbox(
+          //         activeColor: ThemeManager.borderColor,
+          //         checkColor: ThemeManager.primaryColor,
+          //         semanticLabel: "Remember Me?",
+          //         value: isChecked,
+          //         onChanged: (value) {
+          //           setState(() {
+          //             isChecked = value ?? false;
+          //           });
+          //         },
+          //       ),
+          //     ),
+          //     SizedBox(width: 5),
+          //     Text("Remember Me"),
+          //     Expanded(child: Container()),
+          //     Text("Forgot Password?"),
+          //   ],
+          // ),
           SizedBox(height: 15),
           SizedBox(
             height: 60,
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  // Valid case
+                  ScaffoldMessenger.of(
+                    context,
+                  ).showSnackBar(SnackBar(content: Text("Everything passed")));
+                } else {
+                  // Invalid case
+                  ScaffoldMessenger.of(
+                    context,
+                  ).showSnackBar(SnackBar(content: Text("Form has errors")));
+                }
+              },
               child: Text(
                 "Sign Up",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
