@@ -21,8 +21,7 @@ class TrainTicketScreen extends StatelessWidget {
                   itemCount: ticketList.length,
                   itemBuilder: (context, index) {
                     return TrainTicketCard(
-                      oparetorName: ticketList[index].operator,
-                      fare: ticketList[index].fare.toString(),
+                     ticketDetails: ticketList[index],
                     );
                   },
                 ),

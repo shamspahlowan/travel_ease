@@ -26,13 +26,14 @@ class FrontScreen extends StatelessWidget {
                     Text(
                       "Smooth Journeys, Thrilling Adventures",
                       style: TextStyle(
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic,
                       ),
                     ),
                     SizedBox(height: 130),
                     SizedBox(
-                      width: double.infinity,
+                      // width: double.infinity,
                       height: 50,
                       child: ElevatedButton(
                         onPressed: () {
@@ -49,7 +50,7 @@ class FrontScreen extends StatelessWidget {
                           );
                         },
                         child: Text(
-                          "Get Started",
+                          "Get Started --->",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 22,
@@ -86,7 +87,10 @@ class FrontScreen extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             tileMode: TileMode.clamp,
-            colors: [ThemeManager.surfaceColor, ThemeManager.transparentColor],
+            colors: [
+              const Color.fromARGB(54, 63, 247, 216),
+              const Color.fromARGB(0, 255, 255, 255),
+            ],
             begin: Alignment.bottomCenter,
             end: Alignment.topCenter,
           ),

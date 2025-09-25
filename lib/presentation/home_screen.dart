@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 100,
+                height: 80,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: ThemeManager.primaryColor,
@@ -65,20 +65,20 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 5),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: Text(
-                  "Seamless travel planning, just for you.",
-                  softWrap: true,
-                  style: TextStyle(
-                    height: 1.1,
-                    color: ThemeManager.errorColor,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+              // SizedBox(height: 5),
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(horizontal: 8),
+              //   child: Text(
+              //     "Seamless travel planning, just for you.",
+              //     softWrap: true,
+              //     style: TextStyle(
+              //       height: 1.1,
+              //       color: ThemeManager.errorColor,
+              //       fontSize: 30,
+              //       fontWeight: FontWeight.bold,
+              //     ),
+              //   ),
+              // ),
               SizedBox(height: 10),
               Expanded(
                 child: Container(
@@ -243,7 +243,7 @@ class AppBarWidget extends StatelessWidget {
                   color: Color(0xFFE9E7D5),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: SvgPicture.asset("assets/svgs/user.svg"),
                 ),
               ),
@@ -254,7 +254,7 @@ class AppBarWidget extends StatelessWidget {
           ),
           SizedBox(width: 10),
           Text(
-            "Hello, USER",
+            "Hello, Shams",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           Expanded(child: SizedBox()),
@@ -265,7 +265,7 @@ class AppBarWidget extends StatelessWidget {
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: const Color(0xFFE9E7D5).withAlpha(120),
+                  color: const Color.fromARGB(174, 3, 107, 90),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
