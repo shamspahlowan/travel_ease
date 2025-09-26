@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+// import 'package:flutter_svg/svg.dart';
 import 'package:travel_ease/presentation/signup_screen.dart';
-import 'package:travel_ease/utils/theme.dart';
+// import 'package:travel_ease/utils/theme.dart';
+import 'package:travel_ease/widgets/branding_widget.dart';
 
 class FrontScreen extends StatelessWidget {
   const FrontScreen({super.key});
@@ -21,7 +22,8 @@ class FrontScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    _branding(),
+                    // _branding(),
+                    BrandingWidget(),
                     SizedBox(height: 25),
                     Text(
                       "Smooth Journeys, Thrilling Adventures",
@@ -97,38 +99,5 @@ class FrontScreen extends StatelessWidget {
         ),
       ),
     ];
-  }
-
-  Widget _branding() {
-    return Stack(
-      clipBehavior: Clip.none,
-      alignment: Alignment.center,
-      children: [
-        SvgPicture.asset(
-          "assets/svgs/roundtrip.svg",
-          width: 200,
-          height: 100,
-          fit: BoxFit.contain,
-          alignment: Alignment.center,
-          colorFilter: ColorFilter.mode(
-            ThemeManager.onPrimaryTextColor,
-            BlendMode.srcIn,
-          ),
-        ),
-        Positioned(
-          top: 70,
-          child: Text(
-            "Travel Ease",
-            style: TextStyle(
-              fontFamily: "Righteous",
-              fontSize: 46,
-              fontWeight: FontWeight.w100,
-              letterSpacing: 2,
-              wordSpacing: 3,
-            ),
-          ),
-        ),
-      ],
-    );
   }
 }

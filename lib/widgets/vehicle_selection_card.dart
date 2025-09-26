@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travel_ease/presentation/home_screen.dart';
 
 class VehicleSelectionCard extends StatefulWidget {
   const VehicleSelectionCard({super.key});
@@ -36,6 +37,16 @@ class _VehicleSelectionCardState extends State<VehicleSelectionCard> {
               });
             }
           });
+          Navigator.push(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) {
+                return HomeScreen();
+              },
+              transitionDuration: Duration(milliseconds: 200),
+              reverseTransitionDuration: Duration(microseconds: 200),
+            ),
+          );
         },
 
         child: Card(
