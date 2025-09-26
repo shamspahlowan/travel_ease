@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_ease/presentation/front_screen.dart';
+import 'package:travel_ease/presentation/vehicle_selection_screen.dart';
 import 'package:travel_ease/utils/theme.dart';
 
 class MainCanvas extends StatefulWidget {
@@ -23,7 +24,7 @@ class _MainCanvasState extends State<MainCanvas> {
       title: "Travel Ease",
       debugShowCheckedModeBanner: false,
       theme: ThemeManager.getTheme(),
-      home: FrontScreen(),
+      home: VehicleSelectionScreen(),
     );
   }
 }
