@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:travel_ease/presentation/home_screen.dart';
 import 'package:travel_ease/presentation/signup_screen.dart';
 import 'package:travel_ease/presentation/vehicle_selection_screen.dart';
 import 'package:travel_ease/utils/sp_text_box_type.dart';
